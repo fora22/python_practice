@@ -20,6 +20,9 @@ class calculator():  # Calculator 객체 선언
         divide_result = x / y
         return divide_result
 
-p = re.compile("[a-z]+")
-m = p.search("3 python")
+p = re.compile("[0-9]+")
+m = p.search("python")
 print(m)
+t = p.findall("31python")
+print(t)
+print()
