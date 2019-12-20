@@ -20,9 +20,6 @@ class calculator():  # Calculator 객체 선언
         divide_result = x / y
         return divide_result
 
-p = re.compile("\W|\d+")
-t = p.findall("4 + 4*8+6-2/6+3")
-
 def delete_blank(test):
     buf = []
     i = 0
@@ -32,6 +29,9 @@ def delete_blank(test):
             i = i -1
         i = i + 1
     return test
+
+p = re.compile("\W|\d+")
+t = p.findall("4 + 4*8+6-2/6+3")
 
 t = delete_blank(t)
 print(t)
