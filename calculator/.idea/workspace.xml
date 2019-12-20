@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="75600a73-c34e-43ae-86dc-e5fc9121c88f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_calculator.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_calculator.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -85,7 +84,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576786754719</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="정규표현식을 활용해 연산자 및 피연산자 구분/공백 제거 가능하도록 함">
+      <created>1576801948496</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1576801948496</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -113,7 +119,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="정규표현식 숫자 맞추기" />
-    <option name="LAST_COMMIT_MESSAGE" value="정규표현식 숫자 맞추기" />
+    <MESSAGE value="정규표현식을 활용해 연산자 및 피연산자 구분/공백 제거 가능하도록 함" />
+    <option name="LAST_COMMIT_MESSAGE" value="정규표현식을 활용해 연산자 및 피연산자 구분/공백 제거 가능하도록 함" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
