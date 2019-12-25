@@ -1,8 +1,17 @@
 import re
 
+class node:
+    def __init__(self, item):
+        self.item = item
+        self.right_node = None
+        self.left_node = None
+
 class calculator():  # Calculator 객체 선언
     def __init__(self):
-        self.result = []  #
+        self.result = []
+        self.root
+
+
 
     def add(self, x, y):
         add_result = x + y
@@ -20,6 +29,8 @@ class calculator():  # Calculator 객체 선언
         divide_result = x / y
         return divide_result
 
+
+
 def delete_blank(test):
     buf = []
     i = 0
@@ -30,8 +41,20 @@ def delete_blank(test):
         i = i + 1
     return test
 
-p = re.compile("\W|\d+")
-t = p.findall("4 + 4*8+6-2/6+3")
+stack = []
+postfix_notation = []
 
+
+p = re.compile("\W|\d+")
+t = p.findall("4 + 46*8+6-2/6+3")
 t = delete_blank(t)
-print(t)
+
+for i in range(len(t)):
+    if t[i].isdecimal():
+        postfix_notation.append(t[i])
+    else:
+        stack.append(t[i])
+
+print(stack)
+print(postfix_notation)
+
