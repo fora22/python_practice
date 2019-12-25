@@ -32,7 +32,6 @@ class calculator():  # Calculator 객체 선언
 
 
 def delete_blank(test):
-    buf = []
     i = 0
     while i != len(test):
         if test[i] == " ":
@@ -46,12 +45,21 @@ postfix_notation = []
 
 
 p = re.compile("\W|\d+")
-t = p.findall("4 + 46*8+6-2/6+3")
+t = p.findall("(11 + 2)*15")
 t = delete_blank(t)
 
 for i in range(len(t)):
     if t[i].isdecimal():
         postfix_notation.append(t[i])
+    elif t[i] == ')':
+        for j in range(len(stack)):
+            postfix_notation.append(stack[j])
+        del stack[:]
+        postfix_notation.remove("(")
+    elif i == (len(t)-1):
+        for j in range(len(stack)):
+            postfix_notation.append(stack[j])
+        del stack[:]
     else:
         stack.append(t[i])
 
