@@ -113,7 +113,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577277041136</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="수식 트리를 위한 후위표기법 구현 과정(stack 활용)ver.3">
+      <created>1577810425993</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1577810425993</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -144,39 +151,53 @@
     <MESSAGE value="정규표현식을 활용해 연산자 및 피연산자 구분/공백 제거 가능하도록 함" />
     <MESSAGE value="수식 트리를 위한 후위표기법 구현 과정(stack 활용)" />
     <MESSAGE value="수식 트리를 위한 후위표기법 구현 과정(stack 활용)ver.2" />
-    <option name="LAST_COMMIT_MESSAGE" value="수식 트리를 위한 후위표기법 구현 과정(stack 활용)ver.2" />
+    <MESSAGE value="수식 트리를 위한 후위표기법 구현 과정(stack 활용)ver.3" />
+    <option name="LAST_COMMIT_MESSAGE" value="수식 트리를 위한 후위표기법 구현 과정(stack 활용)ver.3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/python_calculator.py</url>
-          <line>73</line>
+          <line>160</line>
           <option name="timeStamp" value="21" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/python_calculator.py</url>
-          <line>68</line>
+          <line>155</line>
           <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/python_calculator.py</url>
-          <line>66</line>
+          <line>153</line>
           <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/python_calculator.py</url>
-          <line>77</line>
+          <line>164</line>
           <option name="timeStamp" value="24" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/python_calculator.py</url>
+          <line>79</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
       </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
-        <watch expression="t[i]" />
-        <watch expression="i " />
         <watch expression="postfix_notation" />
         <watch expression="stack" />
+        <watch expression="priority_judge(top_of_stack)" />
+        <watch expression="prime_number" />
+        <watch expression="len(stack)" />
       </configuration>
     </watches-manager>
   </component>
