@@ -40,13 +40,32 @@ def delete_blank(test):
         i = i + 1
     return test
 
+def is_number(str):
+    try:
+        temp = float(str)
+        return True
+    except ValueError:
+        return False
+
 stack = []
 postfix_notation = []
 
 
 p = re.compile("\W|\d+")
-t = p.findall("(11 + 2)*15")
-t = delete_blank(t)
+mathmatical_expression = p.findall("2+3*(5+4*2)-3+6")
+mathmatical_expression = delete_blank(mathmatical_expression)
+
+
+
+for m in mathmatical_expression:
+    if is_number(m):
+        postfix_notation.append(m)
+    else:
+        stack.append(m)
+
+
+
+
 
 for i in range(len(t)):
     if t[i].isdecimal():
@@ -63,6 +82,5 @@ for i in range(len(t)):
     else:
         stack.append(t[i])
 
-print(stack)
-print(postfix_notation)
+print(t)
 
