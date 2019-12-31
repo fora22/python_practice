@@ -120,7 +120,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577810425993</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="수식 트리를 위한 후위표기법 구현 과정(stack 활용)ver.4">
+      <created>1577814209916</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1577814209917</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -152,35 +159,36 @@
     <MESSAGE value="수식 트리를 위한 후위표기법 구현 과정(stack 활용)" />
     <MESSAGE value="수식 트리를 위한 후위표기법 구현 과정(stack 활용)ver.2" />
     <MESSAGE value="수식 트리를 위한 후위표기법 구현 과정(stack 활용)ver.3" />
-    <option name="LAST_COMMIT_MESSAGE" value="수식 트리를 위한 후위표기법 구현 과정(stack 활용)ver.3" />
+    <MESSAGE value="수식 트리를 위한 후위표기법 구현 과정(stack 활용)ver.4" />
+    <option name="LAST_COMMIT_MESSAGE" value="수식 트리를 위한 후위표기법 구현 과정(stack 활용)ver.4" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/python_calculator.py</url>
-          <line>160</line>
+          <line>165</line>
           <option name="timeStamp" value="21" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/python_calculator.py</url>
-          <line>155</line>
+          <line>160</line>
           <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/python_calculator.py</url>
-          <line>153</line>
+          <line>158</line>
           <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/python_calculator.py</url>
-          <line>164</line>
+          <line>169</line>
           <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/python_calculator.py</url>
-          <line>79</line>
-          <option name="timeStamp" value="29" />
+          <line>98</line>
+          <option name="timeStamp" value="36" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
