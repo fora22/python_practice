@@ -71,8 +71,10 @@ class calculator():  # Calculator 객체 선언
                 self.stack.append(temp)
         if len(self.mathmatical_expression) == 0:
             print("수식을 잘못 입력하셨습니다.")
+            print(" ")
         else:
             print(self.stack[0])
+            print(" ")
 
     def operation(self, x, y, oper):
         if oper == "+":
@@ -91,14 +93,26 @@ class calculator():  # Calculator 객체 선언
             self.calc_data()
         except IndexError:
             print("수식을 잘못 입력하셨습니다.")
+            print(" ")
 
 
 
 if __name__ == "__main__":
     while True:
-        calc = calculator()
-        data = input("수식을 입력하세요 : ")
-        calc.calculator_start(data)
+        print("c : 계산기 실행")
+        print("s : 계산기 프로그램 종료")
+        command = input("명령어를 입력하세요 : ")
+        if command == "c":
+            calc = calculator()
+            data = input("수식을 입력하세요 : ")
+            calc.calculator_start(data)
+        elif command == "s":
+            print(" ")
+            print("프로그램이 종료됩니다.")
+            break
+        else:
+            print("잘못된 입력입니다.")
+            print(" ")
 
 # def is_number(str):
 #     try:
