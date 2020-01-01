@@ -92,7 +92,7 @@ class calculator():  # Calculator 객체 선언
             self.change_postfix(self.mathmatical_expression)
             self.calc_data()
         except IndexError:
-            print("수식을 잘못 입력하셨습니다.")
+            print("수식을 잘못 입력하셨습니다.")ㄴ
             print(" ")
 
 
