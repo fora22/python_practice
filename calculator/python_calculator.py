@@ -10,7 +10,7 @@ class calculator():  # Calculator 객체 선언
 
     def input_infix(self, input_infix):
         p = re.compile("\W|\d+")
-        self.mathmatical_expression = p.findall("2+3*(5+4*2)-3+6")  # 2+3*(5+4*2)-3+6
+        self.mathmatical_expression = p.findall(input_infix)  # 2+3*(5+4*2)-3+6
         self.mathmatical_expression = self.delete_blank(self.mathmatical_expression)
 
     def delete_blank(self, m_e):
@@ -82,7 +82,17 @@ class calculator():  # Calculator 객체 선언
         elif oper == "/":
             return x / y
 
-if
+    def calculator_start(self, input_data):
+        self.input_infix(input_data)
+        self.change_postfix(self.mathmatical_expression)
+        self.calc_data()
+
+
+if __name__ == "__main__":
+    calc = calculator()
+    while True:
+        data = input("수식을 입력하세요 : ")
+        calc.input_infix(data)
 
 # def is_number(str):
 #     try:
