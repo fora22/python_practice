@@ -8,9 +8,55 @@ class node:
 
 class calculator():  # Calculator 객체 선언
     def __init__(self):
-        self.result = []
-        self.root
+        self.stack = []
+        self.postfix_notation = []
+        self.operator = ["*", "/", "+", "-"]
+        self.bracket = ["(", ")"]
 
+    def is_number(self, x):
+        if x not in operator and x not in bracket:
+            return True
+        else:
+            return False
+
+    def priority_judge(self, x):
+        if (x == "*") or (x == "/"):
+            return 1
+        elif (x == "+") or (x == "-"):
+            return 0
+        elif (x == "("):
+            return -1
+
+    def change_postfix(self, mathmatical_expression):
+
+        for m_e in mathmatical_expression:
+            if self.is_number(m_e):
+                self.postfix_notation.append(m_e)
+            elif m_e in operator:
+                prime_number = self.priority_judge(m_e)
+                while len(self.stack) > 0:
+                    top_of_stack = stack[-1]
+                    if self.priority_judge(top_of_stack) < prime_number:  # 우선순위 구분이 이상함
+                        break
+                    while len(stack) > 0:
+                        #     temp = stack.pop()
+                        #     if temp == "(":
+                        #         break
+                        #     postfix_notation.append(temp)
+                        self.postfix_notation.append(stack.pop())
+                self.stack.append(m_e)
+
+            elif m_e == "(":
+                stack.append(m_e)
+            elif m_e == ")":
+                while True:
+                    temp = stack.pop()
+                    if temp == "(":
+                        break
+                    postfix_notation.append(temp)
+
+        while len(stack) > 0:
+            postfix_notation.append(stack.pop())
 
 
     def add(self, x, y):
@@ -47,17 +93,9 @@ def delete_blank(test):
 #     except ValueError:
 #         return False
 
-def is_number(x):
-    if x not in operator and x not in bracket:
-        return True
-    else:
-        return False
 
-def priority_judge(x):
-    if (x == "*") or (x == "/"):
-        return 1
-    elif (x == "+") or (x == "-") or (x == "("):
-        return 0
+
+
 
 
 
@@ -67,7 +105,7 @@ operator = ["*", "/", "+", "-"]
 bracket = ["(", ")"]
 
 p = re.compile("\W|\d+")
-mathmatical_expression = p.findall("(2+5)*3*(2+1)") #2+3*(5+4*2)-3+6
+mathmatical_expression = p.findall("2+3*(5+4*2)-3+6") #2+3*(5+4*2)-3+6
 mathmatical_expression = delete_blank(mathmatical_expression)
 
 for m_e in mathmatical_expression:
@@ -77,14 +115,14 @@ for m_e in mathmatical_expression:
         prime_number = priority_judge(m_e)
         while len(stack) > 0:
             top_of_stack = stack[-1]
-            if priority_judge(top_of_stack) <= prime_number:            # 우선순위 구분이 이상함
+            if priority_judge(top_of_stack) < prime_number:            # 우선순위 구분이 이상함
                 break
-            # while len(stack) > 0:
+            while len(stack) > 0:
             #     temp = stack.pop()
             #     if temp == "(":
             #         break
             #     postfix_notation.append(temp)
-            postfix_notation.append(stack.pop())
+                postfix_notation.append(stack.pop())
         stack.append(m_e)
 
     elif m_e == "(":
@@ -98,6 +136,9 @@ for m_e in mathmatical_expression:
 
 while len(stack) > 0:
     postfix_notation.append(stack.pop())
+
+print(stack)
+print(postfix_notation)
 
 
 # def count_bracket(math_exp):        # 괄호 개수를 세는 함수
