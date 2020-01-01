@@ -1,11 +1,5 @@
 import re
 
-class node:
-    def __init__(self, item):
-        self.item = item
-        self.right_node = None
-        self.left_node = None
-
 class calculator():  # Calculator 객체 선언
     def __init__(self):
         self.mathmatical_expression
@@ -55,7 +49,6 @@ class calculator():  # Calculator 객체 선언
                     while len(self.stack) > 0:
                         self.postfix_notation.append(self.stack.pop())
                 self.stack.append(m_e)
-
             elif m_e == "(":
                 self.stack.append(m_e)
             elif m_e == ")":
@@ -68,6 +61,16 @@ class calculator():  # Calculator 객체 선언
         while len(self.stack) > 0:
             self.postfix_notation.append(self.stack.pop())
 
+    def calc_data(self):
+        for op in self.postfix_notation:
+            if self.is_number(op):
+                self.stack.append(op)
+            elif op in self.operator
+                y_stack = self.stack.pop()
+                x_stack = self.stack.pop()
+                temp = self.operation(x_stack, y_stack, op)
+                self.stack.append(temp)
+        print(self.stack)
 
     def operation(self, x, y, oper):
         if oper == "+":
@@ -79,6 +82,7 @@ class calculator():  # Calculator 객체 선언
         elif oper == "/":
             return x / y
 
+if
 
 # def is_number(str):
 #     try:
