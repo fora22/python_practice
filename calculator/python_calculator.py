@@ -2,7 +2,6 @@ import re
 
 class calculator():  # Calculator 객체 선언
     def __init__(self):
-        self.mathmatical_expression
         self.stack = []
         self.postfix_notation = []
         self.operator = ["*", "/", "+", "-"]
@@ -65,34 +64,41 @@ class calculator():  # Calculator 객체 선언
         for op in self.postfix_notation:
             if self.is_number(op):
                 self.stack.append(op)
-            elif op in self.operator
+            elif op in self.operator:
                 y_stack = self.stack.pop()
                 x_stack = self.stack.pop()
                 temp = self.operation(x_stack, y_stack, op)
                 self.stack.append(temp)
-        print(self.stack)
+        if len(self.mathmatical_expression) == 0:
+            print("수식을 잘못 입력하셨습니다.")
+        else:
+            print(self.stack[0])
 
     def operation(self, x, y, oper):
         if oper == "+":
-            return x + y
+            return float(x) + float(y)
         elif oper == "-":
-            return x - y
+            return float(x) - float(y)
         elif oper == "*":
-            return x * y
+            return float(x) * float(y)
         elif oper == "/":
-            return x / y
+            return float(x) / float(y)
 
     def calculator_start(self, input_data):
-        self.input_infix(input_data)
-        self.change_postfix(self.mathmatical_expression)
-        self.calc_data()
+        try:
+            self.input_infix(input_data)
+            self.change_postfix(self.mathmatical_expression)
+            self.calc_data()
+        except IndexError:
+            print("수식을 잘못 입력하셨습니다.")
+
 
 
 if __name__ == "__main__":
-    calc = calculator()
     while True:
+        calc = calculator()
         data = input("수식을 입력하세요 : ")
-        calc.input_infix(data)
+        calc.calculator_start(data)
 
 # def is_number(str):
 #     try:

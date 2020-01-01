@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="75600a73-c34e-43ae-86dc-e5fc9121c88f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/python_calculator.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_calculator.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -154,7 +155,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577871983135</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="객체(class)로 변환중 ver.3">
+      <created>1577872280180</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1577872280180</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -191,14 +199,15 @@
     <MESSAGE value="수식 트리를 위한 후위표기법 구현 과정(stack 활용)ver.6 완료&#10;객체(class)로 변환중" />
     <MESSAGE value="객체(class)로 변환중 ver.1" />
     <MESSAGE value="객체(class)로 변환중 ver.2" />
-    <option name="LAST_COMMIT_MESSAGE" value="객체(class)로 변환중 ver.2" />
+    <MESSAGE value="객체(class)로 변환중 ver.3" />
+    <option name="LAST_COMMIT_MESSAGE" value="객체(class)로 변환중 ver.3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/python_calculator.py</url>
-          <line>115</line>
+          <line>121</line>
           <option name="timeStamp" value="21" />
         </line-breakpoint>
       </breakpoints>
@@ -212,11 +221,8 @@
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
-        <watch expression="postfix_notation" />
-        <watch expression="stack" />
-        <watch expression="priority_judge(top_of_stack)" />
-        <watch expression="prime_number" />
-        <watch expression="len(stack)" />
+        <watch expression="self.stack" />
+        <watch expression="self.postfix_notation" />
       </configuration>
     </watches-manager>
   </component>
