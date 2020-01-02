@@ -85,6 +85,7 @@ class calculator():  # Calculator 객체 선언
             print(" ")
     
     # 계산기 사칙연산
+    # git test
     def operation(self, x, y, oper):
         if oper == "+":
             return float(x) + float(y)
