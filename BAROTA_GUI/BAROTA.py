@@ -27,28 +27,28 @@ class train:
 
 
 
-    # def program_start(self):
-        # print('메뉴를 선택하세요')
-        # print('1. 빠른시간 기차 검색 및 예매')
-        # print('2. 전체 기차 리스트 출력')
-        # print('3. 나의 예매 현황 출력 및 예매 취소')
-        # print('4. 프로그램 종료')
-        # try:
-        #     select = int(input('명령어를 입력해주십시오 : '))              # 명령어 select 입력
-        # except ValueError:
-        #     print('입력이 잘못되었습니다.')                                # 예외처리
+    def program_start(self):
+        print('메뉴를 선택하세요')
+        print('1. 빠른시간 기차 검색 및 예매')
+        print('2. 전체 기차 리스트 출력')
+        print('3. 나의 예매 현황 출력 및 예매 취소')
+        print('4. 프로그램 종료')
+        try:
+            select = int(input('명령어를 입력해주십시오 : '))              # 명령어 select 입력
+        except ValueError:
+            print('입력이 잘못되었습니다.')                                # 예외처리
 
-        # if select == 1:
-        #     self.menu_1()
-        # elif select == 2:
-        #     self.menu_2()
-        # elif select == 3:
-        #     self.menu_3()
-        # elif select == 4:
-        #     self.menu_4()
+        if select == 1:
+            self.menu_1()
+        elif select == 2:
+            self.menu_2()
+        elif select == 3:
+            self.menu_3()
+        elif select == 4:
+            self.menu_4()
 
-        # self.program_start()     # program_start는 
-        # return select
+        self.program_start()     # program_start는 
+        return select
 
 
     def direct_reservation(self):
@@ -130,5 +130,5 @@ class train:
 if __name__ == "__main__":
     print('바로타(BAROTA) 프로그램')
     barota = train()
-    if barota.program_set():
-        barota.program_start()
+    barota.program_set()
+    barota.program_start()
