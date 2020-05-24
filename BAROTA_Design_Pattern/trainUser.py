@@ -29,7 +29,7 @@ class Passenger:
 
     def userReservationInfo(self):
         inputTrainDataBuffer = input('찾으시는 기차 정보를 입력해주세요 - ex) 09:34(시간) 서울(출발역) 부산(도착역) KTX(열차종류) : ')
-        userReservationTrainData = ['08:00', '서울', '부산', '새마을호']#inputTrainDataBuffer.split()#['0705', '서울', '부산', 'KTX']
+        userReservationTrainData = inputTrainDataBuffer.split()#['0705', '서울', '부산', 'KTX']
 
         return userReservationTrainData
 
