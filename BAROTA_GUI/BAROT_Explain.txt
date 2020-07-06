@@ -1,0 +1,8 @@
+각자 구현한 기차관리시스템을 tkinter를 활용해 GUI 프로그램을 만드시오.
+
+파이썬 3.7버전 이하에서 사용하기를 권장함. (3.8버전도 사용 가능하긴 할텐데 최신버전은 잘 모르겠음)
+
+tkinter 교육 자료 : 
+https://comdoc.tistory.com/entry/tkinter-%EA%B3%B5%EB%B6%80%ED%95%98%EA%B8%B0-%EC%A2%8B%EC%9D%80-%EB%B8%94%EB%A1%9C%EA%B7%B8
+
+다른 .py 파일 import 하기 : https://azanewta.tistory.com/24
